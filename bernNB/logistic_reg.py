@@ -2,6 +2,9 @@ import numpy as np
 import math
 from numpy import linalg as LA
 
+"""
+Code by demirobin
+"""
 
 def sigmoid(x):
     if x >= 0:
@@ -29,13 +32,6 @@ class LogisticRegression:
             gradient = np.add(gradient, xi * scalar)
         return gradient
 
-    # We suggest that you implement a fit(X, y, max_iters=5000, lr=0.01, tol=0.0005) function
-    # for your logistic regression class, which takes the training data as input
-    # and sets the model parameter attributes as a side effect.
-    # You should use gradient descent to learn the parameters
-    # and we suggest using the default hyperparameters noted above
-    # for the maximum number of gradient descent iterations (max_iters),
-    # the learning rate (lr), and the tolerance epsilon for stopping (tol).
     def fit(self, max_iter, lr, tol):
         w = np.zeros(len(self.X[0]))  # w vector
         k = 0
@@ -56,10 +52,6 @@ class LogisticRegression:
         self.feature["w"] = w
         print("fit done")
 
-    # We suggest you implement a predict(X) function,
-    # which takes an matrix containing n training examples and outputs n predictions for the estimated ˆy values,
-    # using the currently stored model parameters.
-    # You should logistic function with a threshold of 0.5 to implement this function.
     def predict(self, matrix):
         w = self.feature["w"]
         bias = self.feature[0]
