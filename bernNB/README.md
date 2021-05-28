@@ -1,1 +1,3 @@
-bernoulli naive bayes model
+-logistic regression
+
+-bernoulli naive bayes model
