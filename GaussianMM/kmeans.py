@@ -84,7 +84,6 @@ class KMeans:
         np.savetxt("kmeans_output.tsv", output, fmt='%5.0f', delimiter="\t")
 
 
-# xchen 260856206
 if __name__ == '__main__':
     X = np.genfromtxt("Data.tsv", delimiter="\t")
     model = KMeans(X)
