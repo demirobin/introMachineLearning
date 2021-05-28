@@ -1,0 +1,1 @@
+bernoulli naive bayes model
