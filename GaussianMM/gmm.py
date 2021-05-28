@@ -1,6 +1,9 @@
 import numpy as np
 import math
 
+"""
+Code by demirobin
+"""
 
 def matrix_multiply(xi, mk):  # used to compute covariance
     comps = []
