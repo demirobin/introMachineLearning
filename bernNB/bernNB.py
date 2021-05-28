@@ -1,7 +1,9 @@
 import numpy as np
 import math
 
-
+"""
+Code by demirobin
+"""
 class BernoulliNaiveBayes:
     def __init__(self, training):
         self.dataset = training
@@ -20,11 +22,6 @@ class BernoulliNaiveBayes:
         # self.prior = theta_1
         return theta_1
 
-    # We suggest that you implement a fit(X, y) function for your Naive Bayes class, which takes the training data as
-    # input and sets the model parameter attributes as a side effect. You should use the maximum likelihood
-    # expressions from class to implement this function. You will need to iterate over the training data (or use
-    # array-based arithmetic) to compute some count statistics.
-    # By maximum likelihood solution, theta_j_k = how often that feature occurred in training examples with label y = k
     def fit(self):
         for j in range(0, len(self.X[0])):
             for k in range(0, 2):
@@ -47,10 +44,6 @@ class BernoulliNaiveBayes:
             self.feature[(j, 0)] = miss / k0
         print("fit done")
 
-    # We suggest you implement a predict(X) function,
-    # which takes an matrix containing n training examples and outputs n predictions for the estimated ˆy values,
-    # using the currently stored model parameters. You should use the log-likelihood ratio to implement this function.
-    # The log-odds ratio = bias + sum(wjX[j])
     def predict(self, matrix):
         theta_1 = self.prior()
         sum_j1 = 0
